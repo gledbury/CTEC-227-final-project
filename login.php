@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $row = $result->fetch_assoc();
         $_SESSION['username'] = $row['username'];
         $_SESSION['password'] = $row['password'];
-        header('location: user_page.php');
+        header('location: user_mainPage.php');
         // echo "<p>logged in</p>";
     } else {
         echo "<p>please try again</p>";
