@@ -9,25 +9,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $username = $db->real_escape_string($_POST['username']);
     $password = hash('sha512', $db->real_escape_string($_POST['password']));
+    
 
     $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
     
     // echo $sql;
     $result = $db->query($sql);
+
     if ($result->num_rows ==1) {
         $row = $result->fetch_assoc();
+        $_SESSION['first_name'] = $row['first_name'];
         $_SESSION['username'] = $row['username'];
         $_SESSION['password'] = $row['password'];
+        $_SESSION['id'] = $row['id'];
         header('location: user_mainPage.php');
+        // var_dump($sql);
         // echo "<p>logged in</p>";
     } else {
         echo "<p>please try again</p>";
     }
 }
 ?>
-
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-nav">    
+        <a class="text-white bg-dark" href="home.php" id="home" title="Home">Home</a>
+    </div>
+</nav>
 <div class="login-container">
-    <p>Please login in with your username and password.</p>
+    <h2 class="login">Please login in with your username and password.</h2>
     <div class="container-login-fluid">
         <form class="login-form" action="login.php" method="POST">
             <div class="form-group">
@@ -44,6 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </form>
     </div>
 </div>
+<?php require 'includes/footer.inc.php' ?>
 <script src="js/script.js"></script>
 
 

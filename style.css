@@ -1,0 +1,109 @@
+body {
+    background: url(images/golf2.jpg);
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.welcome {
+    color: white;
+    text-align: center;
+}
+
+.login-container {
+    display: block;
+    text-align: center;
+    padding-top: 30px;
+    /* height: 95vh; */
+}
+
+.login-form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.login {
+    color: white;
+    text-align: center;
+}
+
+.login-password {
+    color: white;
+}
+
+.login-label {
+    color: white;
+}
+
+.register-container {
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.register-form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.register {
+    color: white;
+    padding-bottom: 20px;
+}
+
+.register-label {
+    color: white;
+}
+
+.score-container {
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.score-post {
+    color: white;
+    padding-bottom: 20px;
+}
+
+.score-form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    color: white;
+}
+
+.review-container {
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.review-post {
+    color: white;
+    padding-bottom: 20px;
+}
+
+.review-form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    color: white;
+}
+
+.footer {
+    color: white;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
