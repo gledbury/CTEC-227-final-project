@@ -37,3 +37,22 @@ fetch('helper/is_logged_in.php')
             })
         }
     })
+
+function postScoreForm() {
+    const scoreForm = document.querySelector('.score-form')
+    score_form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const formData = new FormData(scoreForm)
+        fetch('post-score.php', {
+            method: 'post',
+            body: formData
+        }).then(response => response.json())
+            .then(data => {
+                if (data.status != 'ok') {
+                    document.querySelector('#result').innerHTML = 'Score not posted.'
+                } else {
+                    document.querySelector('#result').innerHTML = 'Score posted.'
+                }
+            })
+    })
+}

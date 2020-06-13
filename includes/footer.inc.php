@@ -1,2 +1,3 @@
-<footer class="footer">Created by George Ledbury for CTEC 227 Spring 2020</footer>
-
+<div class="footer-container">
+<!-- <footer class="footer">&copy 2020</footer> -->
+</div>

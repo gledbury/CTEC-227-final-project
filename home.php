@@ -12,7 +12,7 @@ require 'includes/header.inc.php';
     </div>
 </nav>
 <div class="container-home">
-    <h1 class="welcome">Welcome to the Site</h1>
+    <h1 class="welcome">Welcome to the Site <br><?/*= isset($_SESSION['first_name']) ? $_SESSION['first_name'] : 'Please register or login.' */?></h1>
     <h2 class="welcome">Please register if you are a new user or login to access the site.</h2>
 </div>
 <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

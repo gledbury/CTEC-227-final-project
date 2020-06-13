@@ -1,10 +1,10 @@
-<?php 
+<?php
 // user_reviews.php
 session_start();
 
 $pageTitle = "User Course Reviews";
-require_once('includes/db_connection.inc.php');
-require_once('includes/header.inc.php');
+require_once 'includes/db_connection.inc.php';
+require_once 'includes/header.inc.php';
 $user_id = $_SESSION['id'];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $course = $db->real_escape_string($_POST['course']);
@@ -22,12 +22,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!$result) {
         echo "<div>You don't have any reviews to post?</div>";
     } else {
-        header ('location: user_reviews.php');
+        header('location: user_reviews.php');
     }
 }
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-nav">    
+    <div class="container-nav">
         <a class="text-white bg-dark" href="user_scores.php" id="user_scores" title="click to post your scores">Post your scores</a>
         <a class="text-white bg-dark" href="course_reviews.php" id="course_reviews" title="click to see all reviews">Course Reviews</a>
         <a class="text-white bg-dark" href="home.php" id="logout" title="Logout">Logout</a>
@@ -58,4 +58,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="submit" value="Post Review">
         </form>
 </div>
-<?php require 'includes/footer.inc.php' ?>
+<?php require 'includes/footer.inc.php'?>

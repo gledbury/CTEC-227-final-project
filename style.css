@@ -1,5 +1,5 @@
 body {
-    background: url(images/golf2.jpg);
+    /* background: url(images/golf2.jpg); */
     height: 100vh;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -8,8 +8,10 @@ body {
 }
 
 .welcome {
-    color: white;
+    color: #040404;
     text-align: center;
+    /* font-size: 5em; */
+    margin-top: 100px;
 }
 
 .login-container {
@@ -23,42 +25,83 @@ body {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    text-align: left;
 }
 
 .login {
-    color: white;
+    color: #040404;
     text-align: center;
 }
 
 .login-password {
-    color: white;
+    font-weight: bolder;
+    font-size: 1.25em;
+    color: #040404;
 }
 
 .login-label {
+    font-weight: bolder;
+    font-size: 1.25em;
+    color: #040404;
+    text-align: left;
+}
+
+.reset-password {
+    font-weight: bolder;
+    font-size: 1.25em;
     color: white;
 }
 
 .register-container {
-    display: block;
+    /* display: block;
     text-align: center;
+    padding-top: 20px; */
+    margin: 0 auto;
     padding-top: 20px;
+    width: 180px;
 }
 
 .register-form {
-    display: inline-block;
+    /* display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    text-align: left;
+    text-align: left; */
+    /* width: calc(100% - 30px); */
+    height: 30px;
+    /* padding: 0 15px; */
+    margin-bottom: 6px;
+    /* border: 1px solid black; */
+    /* border-radius: 4px; */
+    background-color: #Ffffff;
+    /* float: left; */
+    /* font-family: arial; */
 }
 
 .register {
-    color: white;
+    color: #040404;
     padding-bottom: 20px;
 }
 
-.register-label {
-    color: white;
+/* .register-label {
+    font-weight: bolder;
+    font-size: 1.25em;
+    color: #040404;
+} */
+
+.reg-button {
+    /* margin-top: 10px; */
+    display: block;
+    height: 40px;
+    /* padding: 10px 10px; */
+    margin: 010px auto;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    font-family: arial;
+    font-size: 13px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .score-container {
@@ -68,7 +111,7 @@ body {
 }
 
 .score-post {
-    color: white;
+    color: #040404;
     padding-bottom: 20px;
 }
 
@@ -77,7 +120,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    color: white;
+    color: #040404;
 }
 
 .review-container {
@@ -87,7 +130,7 @@ body {
 }
 
 .review-post {
-    color: white;
+    color: #040404;
     padding-bottom: 20px;
 }
 
@@ -96,14 +139,27 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    color: white;
+    color: #040404;
+}
+
+.label-text {
+    font-weight: bolder;
+    font-size: 1.25em;
+    color: #040404;
+}
+
+.footer-container {
+    margin-top: 20px;
 }
 
 .footer {
-    color: white;
+    color: #040404;
     text-align: left;
     position: absolute;
     bottom: 0;
     padding-left: 20px;
     padding-bottom: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 1.75px;
 }

@@ -19,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($result->num_rows ==1) {
         $row = $result->fetch_assoc();
         $_SESSION['first_name'] = $row['first_name'];
+        $_SESSION['last_name'] = $row['last_name'];
         $_SESSION['username'] = $row['username'];
         $_SESSION['password'] = $row['password'];
         $_SESSION['id'] = $row['id'];
@@ -36,21 +37,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 </nav>
 <div class="login-container">
-    <h2 class="login">Please login in with your username and password.</h2>
+    <h1 class="login">Please login in with your username and password.</h1>
     <div class="container-login-fluid">
         <form class="login-form" action="login.php" method="POST">
             <div class="form-group">
-                <label class="login-label" for="username">Username</label>
+                <label class="login-label" for="username">Username</label><br>
                 <input type="text" class="form-control-sm" name="username" id="username" placeholder="username" required>
             </div>
             <div class="form-group">
-                <label class="login-label" for="password">Password</label>
+                <label class="login-label" for="password">Password</label><br>
                 <input type="password" class="form-control-sm" name="password" id="password" placeholder="password" required>
                 <br>
                 <span class="login-password" id="showPassword" onclick="showPassword();">Show Password</span>
             </div>
-                <input class="btn btn-light" type="submit" value="Login" title="click to login">
+                <!-- <input class=class="login-label" type="submit" value="Login" title="click to login"> -->
+                <button typ="submit" name="login" title="Click to login">Login</button><br><br>
+                
         </form>
+        
     </div>
 </div>
 <?php require 'includes/footer.inc.php' ?>
