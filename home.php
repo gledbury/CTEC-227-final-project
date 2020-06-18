@@ -19,11 +19,11 @@ require 'includes/header.inc.php';
 </nav>
 
 <div class="container-home">
-    <h3 class="welcome">Welcome to the Golf Score and review site.</h3>
+    <h3 class="welcome">Welcome to the Golf score and review site.</h3>
     <img src="images/golf4.jpg" alt="image of golf ball" class="image-home">
     <!-- <div class="imagetext"> -->
     <p class="image-text">This is a site to record your golf scores.<br><br>
-        Please register or log in to record your scores.<br><br>
+        Please register or log in to access the site.<br><br>
         Use our leaderboard to compare your scores with the other users.<br><br>
         Please leave a course review while you are hear, or read reviews from other users.</p>
     <!-- </div> -->
