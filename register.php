@@ -29,15 +29,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-nav">
-        <a class="text-white bg-dark" href="home.php" id="home" title="Home">Home</a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="fas fa-home" href="home.php" id="home" title="Home"></a>
+        </div>
     </div>
 </nav>
 <div class="register-container">
     <h1 class="register">Register</h1>
     <form class="register-form" action="register.php" method="POST">
         <!-- <label class="register-label" for="first_name">First Name</label><br> -->
-        <input type="text" id="first_name" required name = "first_name" placeholder="first name"><br><br>
+        <input type="text" id="first_name" required name="first_name" placeholder="first name"><br><br>
         <!-- <label class="register-label" for="last_name">Last Name</label><br> -->
         <input type="text" id="last_name" required name="last_name" placeholder="last name"><br><br>
         <!-- <label class="register-label" for="email">Email</label><br> -->
@@ -50,13 +56,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input class="reg-button" type="submit" value="Register" title="Click to register">
     </form>
 </div>
-<?php require 'includes/footer.inc.php';?>
-
-
-
-
-
-
-
-
-
+<!-- <?php require 'includes/footer.inc.php';?> -->

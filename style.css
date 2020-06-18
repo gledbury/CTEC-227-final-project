@@ -1,17 +1,92 @@
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
 body {
-    /* background: url(images/golf2.jpg); */
+    background-color: lightgray;
+    font-family: 'Roboto';
+    /* font-size: 22px; */
+}
+
+
+
+.form-group {
+    margin-left: 60px;
+}
+
+.navbar {
+    margin: 5px -10px 0px -10px;
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: white;
+}
+
+.container-home {
+    position: relative;
+    /* height: 100vh; */
+    /* padding-bottom: 2.5rem; */
+}
+
+.image-text {
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    font-size: 1.25em;
+    font-weight: 500;
+    letter-spacing: .15rem;
+}
+
+.image-home {
+    object-fit: cover;
+    width: 100%;
     height: 100vh;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    /* opacity: 0.3; */
 }
 
 .welcome {
     color: #040404;
     text-align: center;
+
     /* font-size: 5em; */
-    margin-top: 100px;
+    margin-top: 15px;
+}
+
+.welcomePara {
+    width: 33vw;
+    font-size: 1.25em;
+    color: #040404;
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 35px;
+}
+
+.welcomeList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* list-style-image: url(favicon_io/favicon-32x32.png); */
+}
+
+.list-group {
+    width: 50vw;
+}
+
+.fas {
+    color: white;
+    padding-top: 13px;
+    padding-right: 20px;
+}
+
+.fas:hover {
+    color: lightskyblue;
+}
+
+.carousel-inner {
+    height: 80vh;
 }
 
 .login-container {
@@ -44,12 +119,6 @@ body {
     font-size: 1.25em;
     color: #040404;
     text-align: left;
-}
-
-.reset-password {
-    font-weight: bolder;
-    font-size: 1.25em;
-    color: white;
 }
 
 .register-container {
@@ -92,7 +161,7 @@ body {
     /* margin-top: 10px; */
     display: block;
     height: 40px;
-    /* padding: 10px 10px; */
+    padding: 10px 10px;
     margin: 010px auto;
     border: none;
     border-radius: 4px;
@@ -104,23 +173,53 @@ body {
     text-align: center;
 }
 
-.score-container {
+/* .score-container {
     display: block;
     text-align: center;
     padding-top: 20px;
-}
+} */
 
 .score-post {
     color: #040404;
     padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
 }
 
 .score-form {
-    display: inline-block;
+    /* display: inline-block;
     margin-left: auto;
-    margin-right: auto;
-    text-align: left;
+    margin-right: auto; */
+    /* text-align: left;
     color: #040404;
+    padding-left: 20px; */
+}
+
+.img-thumbnail {
+    float: right;
+    margin-right: 100px;
+    height: 70%;
+    width: 50%;
+    border-radius: 10px;
+    /* border: 2px solid #040404; */
+    box-shadow: 0 6px 12px 0 rgba(4, 4, 4, 1);
+}
+
+.score-title {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.score-img-thumbnail {
+    float: right;
+    margin-right: 50px;
+    margin-left: 15px;
+    height: 70%;
+    width: 50%;
+    border-radius: 10px;
+    /* border: 2px solid #040404; */
+    box-shadow: 0 6px 12px 0 rgba(4, 4, 4, 1);
 }
 
 .review-container {
@@ -142,24 +241,86 @@ body {
     color: #040404;
 }
 
+.review-title {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.review-course {
+    /* height: 100vh; */
+    background-image: url(images/golf4.jpg);
+    text-align: left;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    /* margin-top: -20px; */
+}
+
+.reviewText {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.reviewTextUl {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
 .label-text {
     font-weight: bolder;
-    font-size: 1.25em;
+    font-size: 1.4em;
     color: #040404;
 }
 
-.footer-container {
-    margin-top: 20px;
+.leaderboard-text {
+    margin-top: 30px;
+    display: inline-block;
+    border-top: 2px solid #040404;
+    border-right: 2px solid #040404;
+    border-bottom: 2px solid #040404;
+    border-left: 2px solid #040404;
 }
+
+.user-scores-container {
+    /* color: #040404;
+    height: 100vh; */
+}
+
+.user-scores {
+    /* margin-top: 30px; */
+    display: inline-block;
+    border-top: 2px solid #040404;
+    border-right: 2px solid #040404;
+    border-bottom: 2px solid #040404;
+    border-left: 2px solid #040404;
+}
+
+.leaderboard-image {
+    float: right;
+    /* margin-right: 50px; */
+    margin-top: 30px;
+    /* max-width: 100%; */
+    width: 50%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+    /* border: 2px solid #040404; */
+    box-shadow: 0 6px 12px 0 rgba(4, 4, 4, 1);
+    /* padding-bottom: 30px; */
+}
+
+.container-footer {}
 
 .footer {
     color: #040404;
-    text-align: left;
-    position: absolute;
-    bottom: 0;
+    /* bottom: 0; */
+    /* margin-top: 40px; */
+    /* padding-top: 50px; */
     padding-left: 20px;
     padding-bottom: 5px;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
-    letter-spacing: 1.75px;
+    letter-spacing: 1.5px;
+    text-align: right;
+
 }

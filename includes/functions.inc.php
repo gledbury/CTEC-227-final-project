@@ -4,21 +4,17 @@
 function display_user_scores()
 {
     $db = new mysqli('localhost', 'root', '', 'golf');
-    // $userName = $_SESSION['id'];
 
-    $sql = "SELECT course_played, date_played, number_holes, course_score, user_id FROM user_scores WHERE user_scores.user_id = {$_SESSION['id']}";
+    $sql = "SELECT user_scores.score, user_scores.holes_played, user_scores.date_played, courses.course FROM user_scores AS user_scores JOIN courses AS courses ON user_scores.course_id=courses.id WHERE user_scores.player_id = {$_SESSION['id']} ORDER BY user_scores.date_played ASC";
+
     $result = $db->query($sql);
 
     while ($row = $result->fetch_assoc()) {
-        $userid = $row['user_id'];
-        $course = $row['course_played'];
+        $course = $row['course'];
+        $score = $row['score'];
+        $holes = $row['holes_played'];
         $date = $row['date_played'];
-        $score = $row['course_score'];
-        $holes = $row['number_holes'];
-        echo "<h3>Course Played: " . $course . "</h3>";
-        echo "<h5>Date Played: " . $date . "</h5>";
-        echo "<h5>Holes Played: " . $holes . "</h5>";
-        echo "<h4>Posted Score: " . $score . "</h4><br>";
+        echo "<p class='user-scores'>&nbsp;Course: $course&nbsp;<br>&nbsp;Score: $score &nbsp;&nbsp;<br>&nbsp;Holes Played: $holes<br>&nbsp;Date Played: $date &nbsp;<br></p>";
     }
 
 }
@@ -27,17 +23,19 @@ function leaderboard()
 {
     $db = new mysqli('localhost', 'root', '', 'golf');
 
-    $sql = "SELECT course_played, date_played, number_holes, course_score, user_id FROM user_scores ORDER BY course_score ASC";
+    $sql = "SELECT user_scores.score, user_scores.holes_played, user_scores.date_played, courses.course,users.first_name,users.last_name FROM user_scores AS user_scores JOIN courses AS courses ON user_scores.course_id=courses.id JOIN users AS users ON user_scores.player_id=users.id WHERE user_scores.player_id=users.id ORDER BY user_scores.score ASC";
     $result = $db->query($sql);
 
     while ($row = $result->fetch_assoc()) {
-        // $player = $row['user_id'];
-
-        $course = $row['course_played'];
+        $course = $row['course'];
+        $score = $row['score'];
+        $holes = $row['holes_played'];
         $date = $row['date_played'];
-        $score = $row['course_score'];
-        $holes = $row['number_holes'];
-        echo "<h4>$course-$score<br>$date $holes holes</h4><br>";
+
+        $firstName = $row['first_name'];
+        $lastName = $row['last_name'];
+
+        echo "<p class='leaderboard-text'>&nbsp;Score: $score<br>&nbsp;Course: $course&nbsp;&nbsp;<br>&nbspHoles Played: $holes<br>&nbsp;Date Played: $date &nbsp;&nbsp;<br>&nbspPlayer: $firstName $lastName</p>";
     }
 
 }

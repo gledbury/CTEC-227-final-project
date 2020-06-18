@@ -1,4 +1,4 @@
-<?php 
+<?php
 // login.php
 session_start();
 $pageTitle = 'Login';
@@ -9,14 +9,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $username = $db->real_escape_string($_POST['username']);
     $password = hash('sha512', $db->real_escape_string($_POST['password']));
-    
 
     $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-    
+
     // echo $sql;
     $result = $db->query($sql);
 
-    if ($result->num_rows ==1) {
+    if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
         $_SESSION['first_name'] = $row['first_name'];
         $_SESSION['last_name'] = $row['last_name'];
@@ -32,8 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-nav">    
-        <a class="text-white bg-dark" href="home.php" id="home" title="Home">Home</a>
+    <div class="container-nav">
+        <a class="fas fa-home" href="home.php" id="home" title="Home"></a>
     </div>
 </nav>
 <div class="login-container">
@@ -42,35 +41,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <form class="login-form" action="login.php" method="POST">
             <div class="form-group">
                 <label class="login-label" for="username">Username</label><br>
-                <input type="text" class="form-control-sm" name="username" id="username" placeholder="username" required>
+                <input type="text" class="form-control-sm" name="username" id="username" placeholder="username"
+                    required>
             </div>
             <div class="form-group">
                 <label class="login-label" for="password">Password</label><br>
-                <input type="password" class="form-control-sm" name="password" id="password" placeholder="password" required>
+                <input type="password" class="form-control-sm" name="password" id="password" placeholder="password"
+                    required>
                 <br>
                 <span class="login-password" id="showPassword" onclick="showPassword();">Show Password</span>
             </div>
-                <!-- <input class=class="login-label" type="submit" value="Login" title="click to login"> -->
-                <button typ="submit" name="login" title="Click to login">Login</button><br><br>
-                
+            <!-- <input class=class="login-label" type="submit" value="Login" title="click to login"> -->
+            <button typ="submit" name="login" title="Click to login" class="reg-button">Login</button><br><br>
         </form>
-        
     </div>
 </div>
-<?php require 'includes/footer.inc.php' ?>
+<!-- <?php require 'includes/footer.inc.php'?> -->
 <script src="js/script.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
