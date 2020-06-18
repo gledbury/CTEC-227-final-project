@@ -42,4 +42,4 @@ if (!isset($_SESSION['username'])) {
     <?php display_user_scores();?>
 </div>
 
-<!-- <?php require 'includes/footer.inc.php'?> -->
+<?php require 'includes/footer.inc.php'?>

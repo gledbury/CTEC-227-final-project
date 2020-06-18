@@ -43,13 +43,9 @@ $user = $_SESSION['first_name'];
     <label for="course"></label>
     <br>
     <select name="course" id="course"></select>
-    <!-- <img src="images/golf4.jpg" alt="image of golf ball" class="image-home"> -->
-
     <div id="reviews"></div>
-
     <script>
     const course = document.querySelector('#course')
-
     fetch('get_course.php')
         .then(response => response.json())
         .then(data => {
@@ -60,22 +56,9 @@ $user = $_SESSION['first_name'];
             course.innerHTML = output
         })
 
-    // course.addEventListener('change', () => {
-    //     fetch('get_reviews.php?course_reviewed=' + course.value)
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             const review = document.querySelector('#reviews')
-    //             let output = `<br><strong>Reviews for ${data.course}</strong>`
-    //             output += `<p>Course Review: ${data.review}</p>`
-    //             output += `<p>Reviewed By: ${data.first_name + ' ' + data.last_name}</p>`
-    //             output += `<p>Date Played: ${data.date_played}</p>`
-    //             review.innerHTML = output
-    //         })
-    // })
     course.addEventListener('change', () => {
         fetch('get_reviews.php?course_reviewed=' + course.value)
             .then(response => response.json())
-
             .then(course_reviews => {
                 const review = document.querySelector('#reviews')
                 let output = ''
@@ -85,13 +68,11 @@ $user = $_SESSION['first_name'];
                     output += `<p class="reviewText">Review: ${course.review}</p>`
                     output +=
                         `<p class="reviewText">Reviewed By: ${course.first_name + ' ' + course.last_name}</p>`
-                    output += `<p class="reviewTextUl">Date Played: ${course.date_played}</p>`
+                    output += `<p class="reviewText">Date Played: ${course.date_played}</p>`
                 })
-
                 review.innerHTML = output
-
             })
     })
     </script>
 </div>
-</body>
+<?php require 'includes/footer.inc.php'?>

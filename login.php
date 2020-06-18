@@ -36,7 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 </nav>
 <div class="login-container">
-    <h1 class="login">Please login in with your username and password.</h1>
+    <h1 class="login">Thank you for registering!</h1>
+    <h3 class="login">Please login in with your username and password.</h3>
     <div class="container-login-fluid">
         <form class="login-form" action="login.php" method="POST">
             <div class="form-group">

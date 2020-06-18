@@ -41,7 +41,7 @@ if (!isset($_SESSION['username'])) {
     </div>
 </nav>
 <div class="welcome">
-    <?php echo "<h1>Welcome back " . $userName . "</h1>"; ?>
+    <?php echo "<h1>Welcome " . $userName . "</h1>"; ?>
 </div>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

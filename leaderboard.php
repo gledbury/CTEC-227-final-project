@@ -19,7 +19,6 @@ $userLast = $_SESSION['last_name'];
             <a class="nav-item nav-link text-white" href="user_scores.php" id="user_scores"
                 title="see your posted scores">Your
                 scores</a>
-
             <a class="nav-item nav-link text-white" href="post_review.php" id="post_review"
                 title="review a course">Review a
                 course</a>
@@ -32,11 +31,7 @@ $userLast = $_SESSION['last_name'];
         </div>
     </div>
 </nav>
-
-<!-- <h3>Best scores posted!</h3> -->
-
-<!-- <div class="container-leader"> -->
 <img src="images/leaderboard.jpg" alt="image of golf leader board" class="leaderboard-image">
 
 <?php leaderboard();?>
-<!-- </div> -->
+<?php require 'includes/footer.inc.php'?>
